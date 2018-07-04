@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class En1_16 {
+public class En1_17 {
 
     static void spira(int n) {
 		for (int i = 1; i <= n; i++) {
