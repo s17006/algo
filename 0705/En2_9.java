@@ -29,7 +29,7 @@ class En2_9 {
 
         for (int i = 1; i < m; i++)
             days +=  mdays[isLeap(y)][i - 1];
-            if (mdays[isLeap(y)] == mdays[0]){
+            if (isLeap(y) == 0){
                 days = 365 - days;
             }
             else days = 366 - days;
