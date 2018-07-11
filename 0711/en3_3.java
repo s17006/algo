@@ -8,9 +8,41 @@ class BinSearch {
 	static int binSearch(int[] a, int n, int key) {
 		int pl = 0;			// 探索範囲先頭のインデックス
 		int pr = n - 1;	// 　 〃 　末尾のインデックス
+        System.out.print("   |");
+        for (int i = 0; i < n; i++){
+            System.out.printf("%4d",i);
+        }
+        System.out.println();
 
+        System.out.print("---+");
+        for (int i = 0; i < n; i++){
+            System.out.print("----");
+        }
+        System.out.println();
+        String w = "    ";
+        String d = " <- ";
+        String s = "  ->";
+        String p = "   +";
 		do {
 			int pc = (pl + pr) / 2;	// 中央要素のインデックス
+            System.out.print("   |");
+            for (int i = 0; i < pr; i++){
+                if (i == pl){
+                    System.out.print(d);
+                }
+                else if(i == pc){
+                    System.out.print(p);
+                }
+                else{
+                    System.out.print(w);
+                }
+            }
+            System.out.println(s);
+            System.out.printf("%3d|",pc);
+            for (int i = 0; i < n; i++){
+                System.out.printf("%4d",a[i]);
+            }
+            System.out.println();
 			if (a[pc] == key)
 				return pc;				// 探索成功
 			else if (a[pc] < key)
@@ -49,6 +81,6 @@ class BinSearch {
 		if (idx == -1)
 			System.out.println("その値の要素は存在しません。");
 		else
-			System.out.println("その値はx[" + idx + "]にあります。");
+			System.out.println(ky+"はx[" + idx + "]にあります。");
 	}
 }
