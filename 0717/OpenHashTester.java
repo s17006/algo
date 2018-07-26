@@ -15,13 +15,13 @@ public class OpenHashTester {
 		private String  name;			// 氏名
 
 		//--- キー値 ---//
-		Integer keyCode() {
-			return no;
+		String keyCode() {
+			return name;
 		}
 
 		//--- 文字列表現を返す ---//
 		public String toString() {
-			return name;
+			return no.toString();
 		}
 
 		//--- データの読込み ---//
@@ -83,7 +83,7 @@ public class OpenHashTester {
 		Data data;					// 追加用データ参照
 		Data temp = new Data();	// 読込み用データ
 
-		OpenHash<Integer, Data> hash = new OpenHash<Integer, Data>(13);
+		OpenHash<String, Data> hash = new OpenHash<String, Data>(13);
 
 		do {
 			switch (menu = SelectMenu()) {
@@ -95,7 +95,7 @@ public class OpenHashTester {
 			 	 case 1: System.out.println("そのキー値は登録ずみです。");
 			 	 			break;
 			 	 case 2: System.out.println("ハッシュ表が満杯です。");
-			 	 			break; 
+			 	 			break;
 			 	}
 			 	break;
 
