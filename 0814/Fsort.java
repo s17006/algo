@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 class FsortEx {
 
    //--- 度数ソート（配列要素の値は0以上max以下） ---//
