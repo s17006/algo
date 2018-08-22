@@ -1,5 +1,5 @@
 // ハノイの塔
-
+//
 import java.util.Scanner;
 
 class Hanoi {

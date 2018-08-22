@@ -4,16 +4,28 @@ import java.util.Scanner;
 
 class RecurX2 {
 
+    static IntStack nst = new IntStack(100);
+    static IntStack swst = new IntStack(100);
 	//--- 再帰を除去したrecur ---//
 	static void recur(int n) {
-		IntStack s = new IntStack(n);
-
+        nst.push(n);
+        inst sw = 0;
 		while (true) {
-			if (n > 0) {
-				s.push(n);						// nの値をプッシュ
-				n = n - 1;
-				continue;
-			}
+            if (n>0){
+			    if (sw == 0) {
+				    n = n - 1;
+                    nst.push(n);
+                    nst.push(sw)
+                    continue;
+			    }
+                if (sw == 1){
+                    n = n -2;
+                    nst.push(n);
+                    swst.push(sw);
+                    sw = 0;
+                }
+            }
+        }
 			if (s.isEmpty() != true) {		// スタックが空でなければ
 				n = s.pop();					// 保存していた値をnにポップ
 				System.out.println(n);
